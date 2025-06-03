@@ -39,9 +39,19 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p class="career-summary">
+        <p class="career-summary" id="careerSummary">
             Highly accomplished SAP Program and Delivery Manager with 17 years of experience leading complex projects across diverse industries. Proven ability to manage multi-million dollar portfolios, drive operational excellence, and deliver successful outcomes using Waterfall, Agile, and Hybrid methodologies. Expertise in stakeholder management, pre-sales, service delivery, and team leadership. Proven track record of exceeding targets, optimizing performance, and fostering strong client relationships.
         </p>
+        <button id="getCareerInsightsBtn" class="gemini-btn">View Career Path Insights ✨</button>
+        <div id="insightsResult" class="insights-container" style="display:none;">
+            <h3>Future Career Path Insights:</h3>
+            <div id="insightsContent" class="insights-content-box"></div>
+            <div id="loadingIndicator" class="loading-indicator" style="display:none;">
+                <div class="spinner"></div>
+                <p>Generating insights...</p>
+            </div>
+        </div>
+
         <h3>Core Competencies</h3>
         <div class="competencies">
             <div class="competency">
@@ -205,6 +215,84 @@
     <footer>
         <p>&copy; 2025 Avash Mohanty. All Rights Reserved. | Designed to Impress</p>
     </footer>
+
+    <!-- JavaScript for Gemini API Interaction -->
+    <script>
+        // Get references to the DOM elements
+        const getInsightsBtn = document.getElementById('getCareerInsightsBtn');
+        const insightsResultDiv = document.getElementById('insightsResult');
+        const insightsContentDiv = document.getElementById('insightsContent');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const careerSummaryText = document.getElementById('careerSummary').innerText;
+
+        // Event listener for the button click
+        getInsightsBtn.addEventListener('click', async () => {
+            // Show loading indicator and insights container
+            insightsResultDiv.style.display = 'block';
+            insightsContentDiv.innerHTML = ''; // Clear previous results
+            loadingIndicator.style.display = 'flex';
+            getInsightsBtn.disabled = true; // Disable button during API call
+
+            // Construct the prompt for the Gemini API
+            const prompt = `Based on the following career summary of an SAP Program and Delivery Manager: "${careerSummaryText}", please provide:
+1.  Three potential future career paths or advanced roles this individual could aspire to.
+2.  For each path, list 2-3 key skills or areas of knowledge that would be beneficial to develop further.
+3.  Briefly mention 1-2 current industry trends relevant to these career paths in the SAP and Program Management domain.
+Format the response clearly, perhaps using headings for each path and bullet points for skills and trends.`;
+
+            try {
+                // Prepare the payload for the Gemini API
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // API key will be injected by the environment if needed
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                // Make the API call
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    // Handle HTTP errors
+                    const errorData = await response.json();
+                    console.error('API Error:', errorData);
+                    insightsContentDiv.innerHTML = `<p class="error-message">Sorry, couldn't fetch insights at the moment. Error: ${errorData.error?.message || response.statusText}</p>`;
+                    return; // Exit the function
+                }
+
+                const result = await response.json();
+
+                // Process and display the result
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    let text = result.candidates[0].content.parts[0].text;
+                    // Corrected formatting:
+                    // 1. Replace actual newline characters (sent by API as \n) with <br> for HTML display.
+                    text = text.replace(/\n/g, '<br>');
+                    // 2. Bold lines that look like "1. Heading" etc.
+                    //    This regex looks for a digit (\d), a literal dot (\.), a space (\s),
+                    //    then captures the text (.*?) up to the next <br> or end of line ($).
+                    text = text.replace(/(\d\.\s)(.*?)(?=<br>|$)/gi, '<strong>$1$2</strong>');
+                    insightsContentDiv.innerHTML = text;
+                } else {
+                    insightsContentDiv.innerHTML = '<p class="error-message">No insights received. The response structure might have changed or content is missing.</p>';
+                    console.error('Unexpected API response structure:', result);
+                }
+
+            } catch (error) {
+                // Handle network errors or other issues
+                console.error('Error fetching career insights:', error);
+                insightsContentDiv.innerHTML = `<p class="error-message">An error occurred while fetching insights: ${error.message}. Please try again later.</p>`;
+            } finally {
+                // Hide loading indicator and re-enable button
+                loadingIndicator.style.display = 'none';
+                getInsightsBtn.disabled = false;
+            }
+        });
+    </script>
 
 </body>
 </html>
