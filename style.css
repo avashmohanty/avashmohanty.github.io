@@ -1,20 +1,24 @@
+/* General Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #eef1f5; /* Light grayish blue background */
     color: #333;
+    line-height: 1.6;
     scroll-behavior: smooth;
 }
 
+/* Header and Navigation */
 header {
-    background-color: #003366;
+    background-color: #003B73; /* Deep Cerulean Blue */
     color: white;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -23,10 +27,13 @@ nav {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .logo h1 {
     margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .nav-links {
@@ -37,112 +44,176 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #ff9900;
+.nav-links a:hover, .nav-links a.active {
+    background-color: #FFD700; /* Gold accent */
+    color: #003B73;
 }
 
+/* General Section Styling */
 section {
-    padding: 100px 5%;
+    padding: 120px 5% 80px; /* Increased top padding due to fixed header */
     text-align: center;
+    border-bottom: 1px solid #dce1e7;
 }
 
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 { /* Section Titles */
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #003B73; /* Deep Cerulean Blue */
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after { /* Underline effect for section titles */
+    content: '';
+    width: 70px;
+    height: 4px;
+    background-color: #FFD700; /* Gold accent */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #00509E; /* Slightly lighter blue */
+    margin-bottom: 25px;
+}
+
+/* Home Section */
 #home {
-    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('your-background-image.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 59, 115, 0.85), rgba(0, 59, 115, 0.85)), url('https://placehold.co/1920x1080/002244/FFFFFF?text=Background+Image') no-repeat center center/cover; /* Placeholder background */
     color: white;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-top: 0; /* Remove padding for full viewport height */
 }
 
 .home-content {
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeInScaleUp 1s ease-in-out forwards;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    border: 5px solid #ff9900;
+    border: 7px solid #FFD700; /* Gold accent border */
+    margin-bottom: 25px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
 }
 
 #home h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 20px 0 10px;
+    color: white; /* Ensure title is white */
+    font-weight: 700;
 }
+#home h2::after { /* Remove underline for home title or make it white */
+    background-color: #FFD700;
+}
+
 
 #home p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 300;
 }
 
+/* About Section */
 .career-summary {
     max-width: 800px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #003366;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 .competencies {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 25px;
 }
 
 .competency {
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    width: 22%;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    width: calc(33.333% - 50px); /* Adjust for gap */
+    min-width: 280px; /* Minimum width for smaller screens */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
 .competency:hover {
     transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 59, 115, 0.15);
 }
 
 .competency i {
-    font-size: 2.5rem;
-    color: #ff9900;
+    font-size: 2.8rem;
+    color: #FFD700; /* Gold accent */
     margin-bottom: 15px;
+    display: block;
+    text-align: center;
 }
 
 .competency h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: #003B73;
     margin-bottom: 10px;
+    text-align: center;
+}
+.competency p {
+    font-size: 0.95rem;
+    color: #555;
 }
 
+/* Experience Section - Timeline */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.timeline::after {
+.timeline::after { /* The central line */
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: #003366;
+    width: 4px;
+    background-color: #00509E; /* Slightly lighter blue */
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    margin-left: -2px;
+    border-radius: 2px;
 }
 
 .timeline-item {
@@ -150,81 +221,265 @@ h2 {
     position: relative;
     background-color: inherit;
     width: 50%;
+    box-sizing: border-box;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(odd) { /* Item on the left */
     left: 0;
+    padding-right: 60px; /* Space for the circle */
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-child(even) { /* Item on the right */
     left: 50%;
+    padding-left: 60px; /* Space for the circle */
 }
 
+/* The circles on the timeline */
 .timeline-item::after {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
+    width: 20px;
+    height: 20px;
     background-color: white;
-    border: 4px solid #ff9900;
-    top: 15px;
+    border: 4px solid #FFD700; /* Gold accent */
+    top: 25px;
     border-radius: 50%;
     z-index: 1;
 }
-
-.timeline-item:nth-child(even)::after {
-    left: -16px;
+.timeline-item:nth-child(odd)::after {
+    right: 31px; /* Adjust based on padding */
 }
 
+.timeline-item:nth-child(even)::after {
+    left: 31px; /* Adjust based on padding */
+}
+
+
 .timeline-content {
-    padding: 20px 30px;
+    padding: 25px;
     background-color: white;
     position: relative;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
     text-align: left;
+}
+.timeline-content:hover {
+    box-shadow: 0 8px 20px rgba(0, 59, 115, 0.12);
 }
 
 .timeline-content h3 {
     margin-top: 0;
-    color: #003366;
+    color: #003B73;
+    font-size: 1.4rem;
 }
-.timeline-content .company {
+.timeline-content .company-duration {
+    font-size: 0.9rem;
     font-style: italic;
+    color: #00509E;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.timeline-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.timeline-content ul li {
+    font-size: 0.95rem;
     color: #555;
+    margin-bottom: 8px;
 }
 
-.education {
-    max-width: 800px;
-    margin: 40px auto 0;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Education & Skills Section */
+#education {
+    background-color: #ffffff; /* White background for contrast */
+}
+.education-skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+.education-column, .skills-column {
+    flex: 1;
+    min-width: 300px; /* Ensure columns don't get too narrow */
+    background-color: #f9fafb;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.education-item h4, .skills-column h4 {
+    color: #003B73;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.education-item p, .skills-column p, .certifications-list li {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+.certifications-list {
+    list-style: none;
+    padding-left: 0;
+}
+.certifications-list li {
+    padding-left: 20px;
+    position: relative;
+}
+.certifications-list li::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #FFD700;
+    position: absolute;
+    left: 0;
 }
 
-#contact .contact-info {
-    font-size: 2rem;
+
+/* Contact Section */
+#contact {
+    background-color: #002244; /* Dark Navy for contrast */
+    color: #f4f4f4;
+}
+#contact h2 {
+    color: white; /* Make section title white */
+}
+#contact h2::after {
+    background-color: #FFD700; /* Gold accent for underline */
+}
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    gap: 20px; /* Space between contact items */
+    margin-top: 30px;
 }
 
 .contact-icon {
-    color: #003366;
-    margin: 0 20px;
-    transition: color 0.3s;
+    color: #FFD700; /* Gold accent for icons */
+    text-decoration: none;
+    font-size: 1.1rem; /* Text size */
+    display: flex; /* Align icon and text */
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.contact-icon i {
+    font-size: 1.5rem; /* Icon size */
 }
 
 .contact-icon:hover {
-    color: #ff9900;
+    color: #fff; /* Lighter gold on hover */
+    transform: scale(1.05);
 }
 
+.personal-info-contact {
+    margin-top: 40px;
+    font-size: 0.95rem;
+    color: #bdc3c7; /* Lighter gray for less prominent info */
+}
+.personal-info-contact p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+
+/* Footer */
 footer {
-    background-color: #003366;
-    color: white;
+    background-color: #001a33; /* Even darker blue for footer */
+    color: #bdc3c7; /* Light gray text */
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 0;
+    font-size: 0.9rem;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Animations */
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) {
+    .competency {
+        width: calc(50% - 25px); /* Two columns on medium screens */
+    }
+    .timeline::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after {
+        left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 5px 10px;
+    }
+    #home h2 {
+        font-size: 2.8rem;
+    }
+    #home p {
+        font-size: 1.3rem;
+    }
+    .competency {
+        width: calc(100% - 20px); /* Full width on small screens */
+        margin: 10px auto;
+    }
+    .education-skills-container {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h2 {
+        font-size: 2.2rem;
+    }
+    #home p {
+        font-size: 1.1rem;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
 }
