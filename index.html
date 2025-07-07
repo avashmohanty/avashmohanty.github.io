@@ -30,9 +30,9 @@
     <section id="home">
         <div class="home-content">
             <!-- Make sure profile.jpg is in the same folder -->
-            <img src="profile.jpg" alt="Avash Mohanty" class="profile-pic">
+            <img src="profile.jpg" alt="Avash Mohanty" class="profile-pic" onerror="this.onerror=null; this.src='https://placehold.co/150x150/003366/FFFFFF?text=AM';">
             <h2>Avash Mohanty</h2>
-            <p>Accomplished SAP Program & Delivery Manager</p>
+            <p>Accomplished Program & Delivery Manager</p>
         </div>
     </section>
 
@@ -40,8 +40,15 @@
     <section id="about">
         <h2>About Me</h2>
         <p class="career-summary" id="careerSummary">
-            Highly accomplished SAP Program and Delivery Manager with 17 years of experience leading complex projects across diverse industries. Proven ability to manage multi-million dollar portfolios, drive operational excellence, and deliver successful outcomes using Waterfall, Agile, and Hybrid methodologies. Expertise in stakeholder management, pre-sales, service delivery, and team leadership. Proven track record of exceeding targets, optimizing performance, and fostering strong client relationships.
+            Highly accomplished Program and Delivery Manager with 17 years of experience leading complex projects across diverse industries. Proven ability to manage multi-million dollar portfolios, drive operational excellence, and deliver successful outcomes using Waterfall, Agile, and Hybrid methodologies. Expertise in stakeholder management, pre-sales, service delivery, and team leadership. Proven track record of exceeding targets, optimizing performance, and fostering strong client relationships.
         </p>
+        <button id="getCareerInsightsBtn" class="gemini-btn">View Career Path Insights ✨</button>
+        <div id="insightsResult" class="insights-container" style="display:none;">
+            <h3>Future Career Path Insights:</h3>
+            <div id="insightsContent" class="insights-content-box"></div>
+            <div id="loadingIndicator" class="loading-indicator" style="display:none;">
+                <div class="spinner"></div>
+                <p>Generating insights...</p>
             </div>
         </div>
 
@@ -50,32 +57,32 @@
             <div class="competency">
                 <i class="fas fa-tasks"></i>
                 <h4>Program Management</h4>
-                <p>End-to-End project delivery (Waterfall, Agile, Hybrid, V Model). Business case development, SAP program leadership (S/4HANA, SuccessFactors, Ariba), solution design, financial oversight, risk management, and adherence to Business Transformation Frameworks.</p>
+                <p>End-to-end project delivery (Waterfall, Agile, Hybrid, V Model). Building business cases for SAP programs (S/4HANA, SuccessFactors, Ariba), ensuring seamless system integration, and directing the full IT solution lifecycle. Accountable for financials, outcomes, and adherence to Business Transformation Frameworks.</p>
             </div>
             <div class="competency">
                 <i class="fas fa-handshake"></i>
                 <h4>Stakeholder Management</h4>
-                <p>Generating stakeholder buy-in, building shared vision, maintaining strong client relationships, and aligning projects with group strategy. Reporting to senior leadership and board level overviews.</p>
+                <p>Generating stakeholder buy-in and a shared vision. Building strong relationships with senior IT and business stakeholders to align projects with group strategy. Providing board-level overviews and ensuring customer satisfaction through excellent professional relations.</p>
             </div>
             <div class="competency">
                 <i class="fas fa-chart-line"></i>
                 <h4>Pre-Sales & Sales</h4>
-                <p>Client needs analysis, solution development, proposal creation, commercial negotiation, and presenting value propositions. Collaboration with implementation teams for smooth project transitions.</p>
+                <p>Engaging clients to understand operational challenges, presenting tailored solutions, and handling objections. Collaborating with internal teams to develop proposals, highlighting value propositions, and ensuring a smooth transition from sales to execution.</p>
             </div>
              <div class="competency">
                 <i class="fas fa-users-cog"></i>
                 <h4>Team Management</h4>
-                <p>Recruitment, performance appraisal, mentoring, fostering trust, and encouraging improvement and innovation. Leading diverse, high-performing global teams.</p>
+                <p>Leading and mentoring diverse, high-performing global teams. Managing recruitment, performance appraisals, and fostering an atmosphere of trust and innovation to ensure efficiency and meet group targets.</p>
             </div>
             <div class="competency">
                 <i class="fas fa-cogs"></i>
                 <h4>Service Management</h4>
-                <p>Understanding technology trends, defining support infrastructure, service delivery methods, and transitioning new projects. Budget calculation and resource planning.</p>
+                <p>Maintaining a strong understanding of technology trends to define support infrastructure and service delivery methods. Managing the transition of new projects, budget calculations, and resource planning with HR and internal teams.</p>
             </div>
             <div class="competency">
                 <i class="fas fa-chart-pie"></i>
                 <h4>Performance Management</h4>
-                <p>Conducting reviews, tracking productivity, performing health checks, and delivering technical presentations to prove business solutions.</p>
+                <p>Conducting productivity and performance reviews for teams. Performing project health checks and delivering technical presentations to demonstrate the value of business solutions to customers across geographies.</p>
             </div>
         </div>
     </section>
@@ -84,19 +91,31 @@
     <section id="experience">
         <h2>Work Experience</h2>
         <div class="timeline">
+            <!-- Spotline Inc. -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>IT Project Manager</h3>
+                    <p class="company-duration">Spotline Inc. | June 2025 – Present</p>
+                    <ul>
+                        <li>Spearheaded the development of comprehensive project plans, defining clear goals, and outlining strategic roadmaps.</li>
+                        <li>Architected and implemented robust IT strategies, ensuring timely and cost-effective delivery of complex technology projects.</li>
+                        <li>Conducted thorough risk assessments, identifying potential impediments and developing proactive mitigation strategies.</li>
+                        <li>Directed cross-functional project teams, defining responsibilities and schedules to optimize performance.</li>
+                        <li>Managed the allocation of project resources, including personnel, hardware, and software, to maximize efficiency.</li>
+                    </ul>
+                </div>
+            </div>
             <!-- Wipro - Program Manager -->
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Program Manager</h3>
-                    <p class="company-duration">Wipro Technologies Pvt. Ltd. | November 2015 – Present</p>
+                    <p class="company-duration">Wipro Technologies Pvt. Ltd. | November 2015 – June 2025</p>
                     <ul>
                         <li>Managed a 16 million USD program portfolio, exceeding revenue targets through strategic account growth.</li>
                         <li>Defined long-term vision and strategic roadmap for SAP programs, aligning with company goals.</li>
                         <li>Led delivery of complex IT solutions for global clients (Roche, McClatchy, Harman, Stagwell, Givaudan, BIS, Accel Group).</li>
-                        <li>Oversaw full project lifecycle: pre-sales, solution design, implementation, testing, post-go-live support.</li>
+                        <li>Oversaw full project lifecycle: pre-sales, solution design, implementation, testing, and post-go-live support.</li>
                         <li>Presented operational dashboards and project health reports to stakeholders.</li>
-                        <li>Managed and mentored high-performing teams, ensuring resource optimization and retention.</li>
-                        <li>Engaged in pre-sales: client needs analysis, solution development, proposals, and negotiations.</li>
                         <li>Successfully handled escalations, mitigated risks, and ensured customer satisfaction.</li>
                     </ul>
                 </div>
@@ -110,8 +129,6 @@
                         <li>Managed delivery of Infrastructure, Incident, and Change Management solutions for Honeywell International Inc.</li>
                         <li>Oversaw offshore operations, ensuring timely resolution of critical incidents within SLAs.</li>
                         <li>Facilitated communication and problem resolution during major outages, driving root cause analysis.</li>
-                        <li>Led and mentored a team of engineers, providing guidance, training, and performance feedback.</li>
-                        <li>Managed project financials, including budgeting, invoicing, and cost optimization.</li>
                     </ul>
                 </div>
             </div>
@@ -121,11 +138,9 @@
                     <h3>Operations Manager</h3>
                     <p class="company-duration">Wipro Technologies Pvt. Ltd. | December 2011 – October 2014</p>
                     <ul>
-                        <li>Led a team of 6 Team Leads, 2 WFMs, 3 SMEs, 1 QA, and 1 Communication Coach for EMC Data Storage solutions.</li>
-                        <li>Conducted performance reviews, tracked productivity, and implemented improvement plans.</li>
-                        <li>Managed project costing, resource planning, and staffing.</li>
-                        <li>Developed and implemented service improvement initiatives (ITIL aligned).</li>
-                        <li>Defined KPIs, developed SOPs, and implemented QA tools.</li>
+                        <li>Led and managed a team of 6 Team Leads, 2 WFMs, 3 SMEs, 1 QA, and 1 Communication Coach for EMC Data Storage solutions.</li>
+                        <li>Conducted performance reviews, tracked productivity metrics, and implemented improvement plans.</li>
+                        <li>Developed and implemented service improvement initiatives, ensuring alignment with ITIL best practices.</li>
                     </ul>
                 </div>
             </div>
@@ -135,8 +150,8 @@
                     <h3>Project Lead</h3>
                     <p class="company-duration">Wipro Technologies Pvt. Ltd. | January 2011 – December 2011</p>
                     <ul>
-                        <li>Led and mentored a team of 43 engineers, providing technical guidance.</li>
-                        <li>Managed team performance, conducted appraisals, and facilitated training.</li>
+                        <li>Led and mentored a team of 43 engineers, providing technical guidance and support.</li>
+                        <li>Managed team performance, conducted appraisals, and facilitated training and development initiatives.</li>
                     </ul>
                 </div>
             </div>
@@ -146,8 +161,8 @@
                     <h3>Lead Problem Resolution Officer (Technical Lead)</h3>
                     <p class="company-duration">Convergys India Services Private Ltd. | August 2007 – May 2010</p>
                     <ul>
-                        <li>Served as SME for Microsoft Portables and Windows OS, providing advanced troubleshooting.</li>
-                        <li>Conducted research, analysis, and knowledge sharing for technical challenges.</li>
+                        <li>Served as SME for Microsoft Portables and Windows OS, providing advanced troubleshooting and technical support.</li>
+                        <li>Conducted research, analysis, and knowledge sharing to address emerging technical challenges.</li>
                     </ul>
                 </div>
             </div>
@@ -168,9 +183,9 @@
                 <ul class="certifications-list">
                     <li>Certified PMP and SAFe practitioner</li>
                     <li>Wipro Scrum Master (WSM)</li>
-                    <li>ITIL v3 Foundation (EXIN Technologies)</li>
+                    <li>ITIL v3 Foundation from EXIN Technologies</li>
                     <li>Six Sigma White Belt (Aided in 2 Black Belt projects)</li>
-                    <li>Lean, MS101, MS201 & VelociQ (Wipro Delivery Framework)</li>
+                    <li>Certified on Lean, MS101, MS201 & VelociQ (Wipro Delivery Framework)</li>
                 </ul>
             </div>
             <div class="skills-column">
@@ -200,6 +215,7 @@
          <div class="personal-info-contact">
             <p><strong>Date of Birth:</strong> May 6, 1984</p>
             <p><strong>Nationality:</strong> Indian</p>
+            <p><strong>Gender:</strong> Male</p>
             <p><strong>Visa Status:</strong> H1B with I-140 Approved</p>
         </div>
     </section>
@@ -227,7 +243,7 @@
             getInsightsBtn.disabled = true; // Disable button during API call
 
             // Construct the prompt for the Gemini API
-            const prompt = `Based on the following career summary of an SAP Program and Delivery Manager: "${careerSummaryText}", please provide:
+            const prompt = `Based on the following career summary of a Program and Delivery Manager: "${careerSummaryText}", please provide:
 1.  Three potential future career paths or advanced roles this individual could aspire to.
 2.  For each path, list 2-3 key skills or areas of knowledge that would be beneficial to develop further.
 3.  Briefly mention 1-2 current industry trends relevant to these career paths in the SAP and Program Management domain.
