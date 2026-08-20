@@ -5,122 +5,292 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avash Mohanty | Program & Delivery Manager | Agentic AI & Automation</title>
     <meta name="description" content="Program & Delivery Manager with 18+ years of experience in enterprise IT solutions, Agentic AI, n8n, Make.com, and $16M+ portfolio governance.">
+    
+    <!-- Font Awesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
     <style>
+        /* ==========================================================================
+           Design Tokens & Modern Executive Palette
+           ========================================================================== */
         :root {
-            --primary-color: #0f172a;
-            --accent-color: #2563eb;
-            --text-color: #334155;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            
+            --brand-dark: #0f172a;       /* Deep Slate */
+            --brand-blue: #2563eb;       /* Executive Sapphire */
+            --brand-accent: #d97706;     /* Warm Gold / Amber Accent */
             --border-color: #e2e8f0;
+            
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* ==========================================================================
+           Global Reset & Base Typography
+           ========================================================================== */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            color: var(--text-color);
-            background-color: var(--bg-light);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-secondary);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: var(--brand-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:focus, button:focus {
+            outline: 3px solid var(--brand-blue);
+            outline-offset: 3px;
+        }
+
+        /* ==========================================================================
+           Header & Dynamic Navigation
+           ========================================================================== */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         nav {
-            background-color: var(--primary-color);
-            color: var(--white);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            width: 90%;
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 70px;
         }
 
-        nav .logo h1 {
+        .logo h1 {
+            color: #ffffff;
             font-size: 1.25rem;
-            color: var(--white);
+            font-weight: 700;
         }
 
-        nav ul {
+        .nav-links {
             display: flex;
             list-style: none;
             gap: 1.5rem;
         }
 
-        nav a {
+        .nav-links a {
             color: #cbd5e1;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
+            font-size: 0.925rem;
+            font-weight: 500;
+            padding: 0.5rem 0.85rem;
+            border-radius: var(--radius-sm);
         }
 
-        nav a:hover {
-            color: var(--white);
+        .nav-links a:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
+        /* ==========================================================================
+           General Section Layouts & Decorative Titles
+           ========================================================================== */
         section {
-            padding: 3rem 5%;
-            max-width: 1100px;
+            padding: 100px 5% 60px;
+            max-width: 1140px;
             margin: 0 auto;
         }
 
-        #home {
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
             text-align: center;
-            padding: 4rem 5% 2rem;
-            background-color: var(--white);
-            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand-blue), var(--brand-accent));
+            border-radius: 2px;
+            margin: 0.5rem auto 0;
+        }
+
+        /* ==========================================================================
+           Hero / Home Banner Section
+           ========================================================================== */
+        #home {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 130px;
         }
 
         .profile-pic {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid var(--accent-color);
+            border: 4px solid var(--bg-surface);
+            box-shadow: 0 0 0 4px var(--brand-blue), var(--shadow-lg);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
         }
 
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 0.25rem;
+        .profile-pic:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 0 4px var(--brand-accent), var(--shadow-lg);
+        }
+
+        .home-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .home-content h2::after {
+            display: none;
+        }
+
+        .home-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+        }
+
+        /* ==========================================================================
+           Experience Timeline Component
+           ========================================================================== */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
         }
 
         .timeline-item {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 2rem;
         }
 
-        .timeline-item h3 {
-            color: var(--primary-color);
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--bg-surface);
+            border: 3px solid var(--brand-blue);
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover::before {
+            background-color: var(--brand-accent);
+            border-color: var(--brand-accent);
+        }
+
+        .timeline-content {
+            background-color: var(--bg-surface);
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
         }
 
         .company-duration {
             font-size: 0.875rem;
-            color: #64748b;
-            margin-bottom: 0.75rem;
+            color: var(--brand-blue);
             font-weight: 600;
+            margin-bottom: 1rem;
         }
 
-        ul.bullets {
-            margin-left: 1.25rem;
+        .bullets {
+            list-style: none;
+            padding-left: 0;
         }
 
-        ul.bullets li {
+        .bullets li {
+            position: relative;
+            padding-left: 1.25rem;
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
+        .bullets li::before {
+            content: "•";
+            color: var(--brand-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ==========================================================================
+           Core Competencies & Skills Grid
+           ========================================================================== */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -128,109 +298,206 @@
         }
 
         .skill-card {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
+            background-color: var(--bg-surface);
+            padding: 1.75rem;
+            border-radius: var(--radius-md);
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-top: 3px solid var(--brand-blue);
         }
 
         .skill-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--brand-dark);
+        }
+
+        /* ==========================================================================
+           Contact Section & Links
+           ========================================================================== */
+        #contact {
+            background-color: var(--brand-dark);
+            color: #f1f5f9;
+            border-radius: var(--radius-lg);
+            margin-bottom: 60px;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: #ffffff;
+        }
+
+        #contact p {
+            color: #94a3b8;
+            max-width: 500px;
+            margin: 0 auto 2rem;
         }
 
         .contact-info {
             display: flex;
+            justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
-            margin-top: 1rem;
         }
 
         .contact-info a {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
+            gap: 0.6rem;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
+        .contact-info a:hover {
+            background-color: var(--brand-blue);
+            border-color: var(--brand-blue);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           Footer
+           ========================================================================== */
         footer {
             text-align: center;
-            padding: 2rem;
-            background: var(--primary-color);
-            color: #94a3b8;
+            padding: 2rem 0;
+            color: var(--text-muted);
             font-size: 0.875rem;
+            border-top: 1px solid var(--border-color);
         }
 
-        @media (max-width: 768px) {
-            nav ul {
+        /* ==========================================================================
+           Media Queries
+           ========================================================================== */
+        @media (min-width: 768px) {
+            .timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-item {
+                width: 50%;
+                padding-left: 0;
+                padding-right: 40px;
+                margin-left: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                margin-left: 50%;
+                padding-right: 0;
+                padding-left: 40px;
+            }
+
+            .timeline-item::before {
+                left: auto;
+                right: -8px;
+            }
+
+            .timeline-item:nth-child(even)::before {
+                right: auto;
+                left: -8px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-links {
                 display: none;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            #home {
+                padding-top: 100px;
             }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-            <h1>Avash Mohanty</h1>
-        </div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Avash Mohanty</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section id="home">
-        <img src="profile.jpg" alt="Avash Mohanty" class="profile-pic" onerror="this.onerror=null; this.src='https://placehold.co/140x140/0f172a/FFFFFF?text=AM';">
-        <h2>Avash Mohanty</h2>
-        <p><strong>Program & Delivery Manager | Agentic AI & Automation Leader</strong></p>
-        <p>Bhubaneswar, Odisha, India | H1B (I-140 Approved)</p>
+        <div class="home-content">
+            <img src="profile.jpg" alt="Avash Mohanty" class="profile-pic" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0f172a/FFFFFF?text=AM';">
+            <h2>Avash Mohanty</h2>
+            <p><strong>Program & Delivery Manager | Agentic AI & Automation Leader</strong></p>
+            <p style="font-size:0.95rem; margin-top:0.25rem;">Bhubaneswar, India | H1B (I-140 Approved)</p>
+        </div>
     </section>
 
     <section id="about">
         <h2>Executive Summary</h2>
-        <p>
-            Visionary Program & Delivery Manager with 18 years of experience orchestrating $16M+ global portfolios across the USA, Germany, and India. Strategic Architect of digital transformations, specialized in enterprise-scale IT solutions for Fortune 500 clients like Roche and Harman International. Pioneer in Agentic AI and Automation, leveraging a 2026 AI Career Accelerator Inner Circle certification to bridge the gap between traditional project management (PMP, SAFe, ITIL) and next-generation operational efficiency.
+        <p style="text-align: center; max-width: 850px; margin: 0 auto; line-height: 1.8;">
+            Visionary Program & Delivery Manager with 18 years of experience orchestrating $16M+ global portfolios across the USA, Germany, and India[cite: 1]. Strategic Architect of digital transformations, specialized in enterprise-scale IT solutions for Fortune 500 clients like Roche and Harman International[cite: 1]. Pioneer in Agentic AI and Automation, leveraging a 2026 AI Career Accelerator Inner Circle certification to bridge the gap between traditional project management (PMP, SAFe, ITIL) and next-generation operational efficiency[cite: 1].
         </p>
     </section>
 
     <section id="experience">
         <h2>Professional Experience</h2>
-        
-        <div class="timeline-item">
-            <h3>IT Project Manager | Spotline Software Solution Pvt. Ltd.</h3>
-            <p class="company-duration">June 2025 – Present | Bhubaneswar, India</p>
-            <ul class="bullets">
-                <li>Architected an AI-driven project governance framework that reduced manual reporting overhead by 30% through automated real-time visibility tools.</li>
-                <li>Orchestrated complex technology roadmaps, utilizing Agentic AI workflows to streamline resource allocation, resulting in a 15% improvement in personnel utilization.</li>
-                <li>Engineered proactive risk mitigation strategies using AI-powered predictive analytics, decreasing project delay risks by identifying bottlenecks 2 weeks in advance.</li>
-                <li>Optimized delivery costs by integrating Prompt-to-Code and AI web/app builders, accelerating development cycles for internal tool prototypes.</li>
-            </ul>
-        </div>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>IT Project Manager | Spotline Software Solution Pvt. Ltd.</h3>
+                    <p class="company-duration">June 2025 – Present | Bhubaneswar, India</p>
+                    <ul class="bullets">
+                        <li>Architected an AI-driven project governance framework that reduced manual reporting overhead by 30% through automated real-time visibility tools[cite: 1].</li>
+                        <li>Orchestrated complex technology roadmaps, utilizing Agentic AI workflows to streamline resource allocation, resulting in a 15% improvement in personnel utilization[cite: 1].</li>
+                        <li>Engineered proactive risk mitigation strategies using AI-powered predictive analytics, decreasing project delay risks by identifying bottlenecks 2 weeks in advance[cite: 1].</li>
+                        <li>Optimized delivery costs by integrating Prompt-to-Code and AI web/app builders, accelerating development cycles for internal tool prototypes[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="timeline-item">
-            <h3>Program Manager | Wipro Technologies Pvt. Ltd.</h3>
-            <p class="company-duration">November 2015 – June 2025 | USA, Germany, India</p>
-            <ul class="bullets">
-                <li>Spearheaded a $16 million USD portfolio, consistently exceeding revenue targets through strategic integration of automation into global service delivery.</li>
-                <li>Pioneered delivery of complex IT solutions for Roche, Harman, and Bank of International Settlements, leveraging AI-powered business analysis to identify $500k+ in annual operational savings.</li>
-                <li>Directed multiple strategic roadmaps and cultivated global cross-functional teams across USA, Germany, and India, reducing training lead times by 25% via AI-driven knowledge systems.</li>
-            </ul>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Program Manager | Wipro Technologies Pvt. Ltd.</h3>
+                    <p class="company-duration">November 2015 – June 2025 | USA, Germany, India</p>
+                    <ul class="bullets">
+                        <li>Spearheaded a $16 million USD portfolio, consistently exceeding revenue targets through strategic integration of automation into global service delivery[cite: 1].</li>
+                        <li>Pioneered delivery of complex IT solutions for Roche, Harman, and Bank of International Settlements, leveraging AI-powered business analysis to identify $500k+ in annual operational savings[cite: 1].</li>
+                        <li>Directed multiple strategic roadmaps and cultivated global cross-functional teams across USA, Germany, and India, reducing training lead times by 25% via AI-driven knowledge systems[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="timeline-item">
-            <h3>Project Manager | Wipro Technologies Pvt. Ltd.</h3>
-            <p class="company-duration">October 2014 – October 2015 | Bangalore, India</p>
-            <ul class="bullets">
-                <li>Streamlined Infrastructure and Change Management for Honeywell International utilizing ITIL best practices.</li>
-                <li>Accelerated Root Cause Analysis (RCA) during major outages by implementing standardized incident tracking.</li>
-                <li>Mentored a multidisciplinary team of 43 engineers delivering EMC Data Storage solutions.</li>
-            </ul>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Project Manager | Wipro Technologies Pvt. Ltd.</h3>
+                    <p class="company-duration">October 2014 – October 2015 | Bangalore, India</p>
+                    <ul class="bullets">
+                        <li>Streamlined Infrastructure and Change Management for Honeywell International utilizing ITIL best practices[cite: 1].</li>
+                        <li>Accelerated Root Cause Analysis (RCA) during major outages by implementing standardized incident tracking[cite: 1].</li>
+                        <li>Mentored a multidisciplinary team of 43 engineers delivering EMC Data Storage solutions[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -239,27 +506,29 @@
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>AI & Agentic Automation</h3>
-                <p>Agentic AI, Make.com, n8n, Prompt Engineering, Generative AI, Prompt-to-Code, AI Web/App Builders.</p>
+                <p>Agentic AI, Make.com, n8n, Prompt Engineering, Generative AI, Prompt-to-Code, AI Web/App Builders[cite: 1].</p>
             </div>
             <div class="skill-card">
                 <h3>Project & Delivery Governance</h3>
-                <p>SAFe Agile Practitioner, PMP, Scrum, ITIL v3, Six Sigma, Lean, Waterfall, V-model, AI-Powered Business/Data Analysis.</p>
+                <p>SAFe Agile Practitioner, PMP, Scrum, ITIL v3, Six Sigma, Lean, Waterfall, V-model, AI-Powered Business/Data Analysis[cite: 1].</p>
             </div>
             <div class="skill-card">
                 <h3>Enterprise Tools & Tech</h3>
-                <p>PowerBI, JIRA, Smartsheet, ServiceNow, Veeva Vault, AWS, Acquia Cloud, EMC Storage Products, MS Excel with AI.</p>
+                <p>PowerBI, JIRA, Smartsheet, ServiceNow, Veeva Vault, AWS, Acquia Cloud, EMC Storage Products, MS Excel with AI[cite: 1].</p>
             </div>
         </div>
     </section>
 
     <section id="certifications">
         <h2>Certifications & Education</h2>
-        <ul class="bullets">
-            <li><strong>AI Career Accelerator Inner Circle Program:</strong> Be10x (2026)</li>
-            <li><strong>Project Management:</strong> Certified PMP, SAFe Practitioner, Wipro Scrum Master (WSM)</li>
-            <li><strong>Technical Certifications:</strong> ITIL v3 Foundation, Six Sigma White Belt, Lean, MS101, MS201, VelociQ</li>
-            <li><strong>Education:</strong> Bachelor of Technology in Information Technology | Silicon Institute of Technology (BPUT)</li>
-        </ul>
+        <div class="skill-card" style="max-width: 800px; margin: 0 auto;">
+            <ul class="bullets">
+                <li><strong>AI Career Accelerator Inner Circle Program:</strong> Be10x (2026)[cite: 1]</li>
+                <li><strong>Project Management:</strong> Certified PMP, SAFe Practitioner, Wipro Scrum Master (WSM)[cite: 1]</li>
+                <li><strong>Technical Certifications:</strong> ITIL v3 Foundation, Six Sigma White Belt, Lean, MS101, MS201, VelociQ[cite: 1]</li>
+                <li><strong>Education:</strong> Bachelor of Technology in IT | Silicon Institute of Technology (BPUT)[cite: 1]</li>
+            </ul>
+        </div>
     </section>
 
     <section id="contact">
@@ -268,7 +537,7 @@
         <div class="contact-info">
             <a href="mailto:avashmohanty@gmail.com"><i class="fas fa-envelope"></i> avashmohanty@gmail.com</a>
             <a href="https://linkedin.com/in/avash-mohanty" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://avashmohanty.github.io/" target="_blank"><i class="fab fa-globe"></i> Personal Site</a>
+            <a href="https://avashmohanty.github.io/" target="_blank"><i class="fab fa-globe"></i> GitHub Page</a>
         </div>
     </section>
 
