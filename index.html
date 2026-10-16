@@ -1,580 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avash Mohanty | Program & Delivery Manager | Agentic AI & Automation</title>
-    <meta name="description" content="Program & Delivery Manager with 18+ years of experience in enterprise IT solutions, Agentic AI, n8n, Make.com, and $16M+ portfolio governance.">
-    
-    <!-- Font Awesome & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avash Mohanty — Program &amp; Delivery Leader</title>
+<meta name="description" content="Program & Delivery Manager. 19 years running global portfolios for Roche, Honeywell and Harman — now building agentic AI into how delivery works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#efe8da;--ink:#16130f;--mute:#6b6354;--rust:#c2410c;--line:#16130f33;--serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .08 0 0 0 0 .05 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+nav{display:flex;justify-content:space-between;align-items:baseline;padding:26px 0;font-size:15px}
+nav .links{display:flex;gap:26px}
+nav a{text-decoration:none;border-bottom:1px solid transparent}
+nav a:hover{border-color:var(--rust);color:var(--rust)}
+.name{font-family:var(--serif);font-size:22px}
 
-    <style>
-        /* ==========================================================================
-           Design Tokens & Modern Executive Palette
-           ========================================================================== */
-        :root {
-            --bg-body: #f8fafc;
-            --bg-surface: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #64748b;
-            
-            --brand-dark: #0f172a;       /* Deep Slate */
-            --brand-blue: #2563eb;       /* Executive Sapphire */
-            --brand-accent: #d97706;     /* Warm Gold / Amber Accent */
-            --border-color: #e2e8f0;
-            
-            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-            --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
-            --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12);
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+/* hero */
+.hero{position:relative;padding:clamp(40px,9vw,110px) 0 90px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,9.6vw,148px);line-height:.92;letter-spacing:-.025em;max-width:11.5em}
+.hero h1 em{font-style:italic;color:var(--rust)}
+.hero h1 .ind{display:block;padding-left:clamp(0px,12vw,180px)}
+.hero .sub{margin:44px 0 0 clamp(0px,36vw,520px);max-width:430px;color:var(--mute)}
+.hero .sub b{color:var(--ink);font-weight:500}
+.squig{display:block;width:min(420px,70%);margin-top:6px}
+.stamp{position:absolute;right:2%;top:30px;width:132px;height:132px;border:1.5px solid var(--rust);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--rust);font:700 11px/1.5 var(--sans);letter-spacing:.14em;transform:rotate(11deg)}
+.stamp span{display:block;font:400 italic 22px/1 var(--serif);letter-spacing:0;margin-bottom:4px}
 
-        /* ==========================================================================
-           Global Reset & Base Typography
-           ========================================================================== */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* numbers */
+.nums{display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:0;border-top:1px solid var(--ink);margin-top:20px}
+.nums div{padding:26px 24px 30px 0}
+.nums div:nth-child(2){padding-top:70px}
+.nums div:nth-child(3){padding-top:10px;padding-left:24px;border-left:1px solid var(--line)}
+.nums strong{display:block;font:400 clamp(54px,8vw,104px)/1 var(--serif);letter-spacing:-.03em}
+.nums small{display:block;max-width:24ch;color:var(--mute);font-size:14px;line-height:1.45;margin-top:8px}
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5.4vw,72px);line-height:1;letter-spacing:-.02em}
+section{padding:110px 0 20px}
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-secondary);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+/* journey */
+.jhead{display:flex;gap:40px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:56px}
+.jhead p{max-width:340px;color:var(--mute);font-size:15px}
+.job{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
+.job:nth-of-type(2){margin-left:6%}
+.job:nth-of-type(3){margin-left:2%}
+.job:nth-of-type(4){margin-left:11%}
+.yrs{font:italic 400 24px/1.1 var(--serif);color:var(--rust)}
+.job h3{font:500 21px/1.25 var(--sans)}
+.job .where{color:var(--mute);font-size:14px;margin:2px 0 14px}
+.job ul{list-style:none;max-width:68ch}
+.job li{padding-left:22px;position:relative;margin-bottom:9px;font-size:16px}
+.job li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1.5px;background:var(--rust)}
+.job li b{font-weight:700}
 
-        h1, h2, h3, h4 {
-            color: var(--text-primary);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
+/* clients */
+.clients{margin-top:100px;display:flex;flex-wrap:wrap;gap:6px 34px;align-items:baseline;font-family:var(--serif);font-size:clamp(30px,5vw,64px);line-height:1.15}
+.clients span:nth-child(even){font-style:italic;color:var(--rust)}
+.clients span:nth-child(3n){margin-left:3vw}
+.clients small{font:400 14px var(--sans);color:var(--mute);width:100%;margin-bottom:4px}
 
-        a {
-            color: var(--brand-blue);
-            text-decoration: none;
-            transition: var(--transition);
-        }
+/* craft */
+.craft{display:grid;grid-template-columns:5fr 7fr;gap:60px;align-items:start}
+.craft h2{position:sticky;top:30px}
+.craft dl{border-top:1px solid var(--ink)}
+.craft dt{font:500 17px var(--sans);padding-top:22px}
+.craft dd{color:var(--mute);padding:4px 0 22px;border-bottom:1px solid var(--line);font-size:16px}
+.note{margin-top:34px;padding:20px 22px;background:#16130f;color:var(--paper);transform:rotate(-1.2deg);max-width:520px;font-size:15px}
+.note b{font-family:var(--serif);font-weight:400;font-style:italic;font-size:22px;color:#f59e66}
 
-        a:focus, button:focus {
-            outline: 3px solid var(--brand-blue);
-            outline-offset: 3px;
-        }
+/* contact */
+.contact{padding:140px 0 60px}
+.contact h2{font-size:clamp(52px,11vw,170px);line-height:.9}
+.contact h2 a{text-decoration:none;font-style:italic;color:var(--rust)}
+.contact h2 a:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:10px}
+.cl{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:40px;font-size:16px}
+footer{border-top:1px solid var(--ink);margin-top:80px;padding:20px 0 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--mute)}
 
-        /* ==========================================================================
-           Header & Dynamic Navigation
-           ========================================================================== */
-        header {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            max-width: 1140px;
-            margin: 0 auto;
-            height: 70px;
-        }
-
-        .logo h1 {
-            color: #ffffff;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            color: #cbd5e1;
-            font-size: 0.925rem;
-            font-weight: 500;
-            padding: 0.5rem 0.85rem;
-            border-radius: var(--radius-sm);
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* ==========================================================================
-           General Section Layouts & Decorative Titles
-           ========================================================================== */
-        section {
-            padding: 100px 5% 60px;
-            max-width: 1140px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
-            text-align: center;
-            position: relative;
-            display: table;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 48px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--brand-blue), var(--brand-accent));
-            border-radius: 2px;
-            margin: 0.5rem auto 0;
-        }
-
-        /* ==========================================================================
-           Hero / Home Banner Section
-           ========================================================================== */
-        #home {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding-top: 130px;
-        }
-
-        .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--bg-surface);
-            box-shadow: 0 0 0 4px var(--brand-blue), var(--shadow-lg);
-            margin-bottom: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 0 4px var(--brand-accent), var(--shadow-lg);
-        }
-
-        .home-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .home-content h2::after {
-            display: none;
-        }
-
-        .home-content p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 650px;
-        }
-
-        /* ==========================================================================
-           Experience Timeline Component
-           ========================================================================== */
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: var(--border-color);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 50px;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 13px;
-            top: 6px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--bg-surface);
-            border: 3px solid var(--brand-blue);
-            z-index: 2;
-            transition: var(--transition);
-        }
-
-        .timeline-item:hover::before {
-            background-color: var(--brand-accent);
-            border-color: var(--brand-accent);
-        }
-
-        .timeline-content {
-            background-color: var(--bg-surface);
-            padding: 1.75rem;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-            border-color: #cbd5e1;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .company-duration {
-            font-size: 0.875rem;
-            color: var(--brand-blue);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .bullets {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .bullets li {
-            position: relative;
-            padding-left: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .bullets li::before {
-            content: "•";
-            color: var(--brand-blue);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        /* ==========================================================================
-           Core Competencies & Skills Grid
-           ========================================================================== */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-card {
-            background-color: var(--bg-surface);
-            padding: 1.75rem;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-top: 3px solid var(--brand-blue);
-        }
-
-        .skill-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-            color: var(--brand-dark);
-        }
-
-        /* ==========================================================================
-           Contact Section & Links
-           ========================================================================== */
-        #contact {
-            background-color: var(--brand-dark);
-            color: #f1f5f9;
-            border-radius: var(--radius-lg);
-            margin-bottom: 60px;
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        #contact h2 {
-            color: #ffffff;
-        }
-
-        #contact p {
-            color: #94a3b8;
-            max-width: 500px;
-            margin: 0 auto 2rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background-color: rgba(255, 255, 255, 0.08);
-            color: #ffffff;
-            padding: 0.75rem 1.25rem;
-            border-radius: var(--radius-sm);
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .contact-info a:hover {
-            background-color: var(--brand-blue);
-            border-color: var(--brand-blue);
-            transform: translateY(-2px);
-        }
-
-        /* ==========================================================================
-           Footer
-           ========================================================================== */
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* ==========================================================================
-           Media Queries
-           ========================================================================== */
-        @media (min-width: 768px) {
-            .timeline::before {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .timeline-item {
-                width: 50%;
-                padding-left: 0;
-                padding-right: 40px;
-                margin-left: 0;
-            }
-
-            .timeline-item:nth-child(even) {
-                margin-left: 50%;
-                padding-right: 0;
-                padding-left: 40px;
-            }
-
-            .timeline-item::before {
-                left: auto;
-                right: -8px;
-            }
-
-            .timeline-item:nth-child(even)::before {
-                right: auto;
-                left: -8px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .nav-links {
-                display: none;
-            }
-            
-            h2 {
-                font-size: 1.75rem;
-            }
-            
-            #home {
-                padding-top: 100px;
-            }
-        }
-    </style>
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:760px){
+ nav .links{gap:16px}.stamp{display:none}
+ .nums{grid-template-columns:1fr}.nums div,.nums div:nth-child(2),.nums div:nth-child(3){padding:22px 0;border-left:0}
+ .job,.job:nth-of-type(n){grid-template-columns:1fr;gap:6px;margin-left:0}
+ .craft{grid-template-columns:1fr;gap:30px}.craft h2{position:static}
+ .hero .sub{margin-left:0}
+}
+</style>
 </head>
 <body>
+<div class="wrap">
+<nav>
+ <span class="name">Avash Mohanty</span>
+ <span class="links"><a href="#journey">Journey</a><a href="#craft">Craft</a><a href="#contact">Contact</a></span>
+</nav>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Avash Mohanty</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="hero">
+ <div class="stamp"><div><span>certified</span>PMP · SAFe<br>ITIL v3</div></div>
+ <h1>I run global delivery. <span class="ind">Lately, the <em>agents</em></span><span class="ind">file the status reports.</span></h1>
+ <svg class="squig" viewBox="0 0 420 18" fill="none" stroke="#c2410c" stroke-width="3" stroke-linecap="round"><path d="M3 11c28-12 40 10 68 0s40-10 68 0 40 10 68-1 40-9 68 1 40 8 66-2 46-3 68 3"/></svg>
+ <p class="sub"><b>Program &amp; Delivery Manager, 19 years in.</b> Bhubaneswar-based, working across the US, Germany and India. I take enterprise programs for regulated, high-stakes clients and rebuild how they get delivered, with automation and AI where it measurably helps.</p>
+</header>
 
-    <section id="home">
-        <div class="home-content">
-            <img src="profile.jpg" alt="Avash Mohanty" class="profile-pic" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0f172a/FFFFFF?text=AM';">
-            <h2>Avash Mohanty</h2>
-            <p><strong>Program & Delivery Manager | Agentic AI & Automation Leader</strong></p>
-            <p style="font-size:0.95rem; margin-top:0.25rem;">Bhubaneswar, India | H1B (I-140 Approved)</p>
-        </div>
-    </section>
+<div class="nums rv">
+ <div><strong>$16M</strong><small>global delivery portfolio across the USA, Germany and India, with zero major SLA breaches</small></div>
+ <div><strong>$500K+</strong><small>annual operational savings surfaced through AI-assisted business analysis</small></div>
+ <div><strong>−30%</strong><small>manual reporting overhead after automating project governance with AI; +15% personnel utilisation from agentic resource planning</small></div>
+</div>
 
-    <section id="about">
-        <h2>Executive Summary</h2>
-        <p style="text-align: center; max-width: 850px; margin: 0 auto; line-height: 1.8;">
-            Visionary Program & Delivery Manager with 18 years of experience orchestrating $16M+ global portfolios across the USA, Germany, and India[cite: 1]. Strategic Architect of digital transformations, specialized in enterprise-scale IT solutions for Fortune 500 clients like Roche and Harman International[cite: 1]. Pioneer in Agentic AI and Automation, leveraging a 2026 AI Career Accelerator Inner Circle certification to bridge the gap between traditional project management (PMP, SAFe, ITIL) and next-generation operational efficiency[cite: 1].
-        </p>
-    </section>
+<section id="journey">
+ <div class="jhead rv"><h2>The long way<br><em style="color:var(--rust)">round.</em></h2><p>Support desk to portfolio owner. Each step added a layer: escalations, then teams, then geographies, then AI.</p></div>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="timeline">
-            
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>IT Project Manager | Spotline Software Solution Pvt. Ltd.</h3>
-                    <p class="company-duration">June 2025 – Present | Bhubaneswar, India</p>
-                    <ul class="bullets">
-                        <li>Architected an AI-driven project governance framework that reduced manual reporting overhead by 30% through automated real-time visibility tools[cite: 1].</li>
-                        <li>Orchestrated complex technology roadmaps, utilizing Agentic AI workflows to streamline resource allocation, resulting in a 15% improvement in personnel utilization[cite: 1].</li>
-                        <li>Engineered proactive risk mitigation strategies using AI-powered predictive analytics, decreasing project delay risks by identifying bottlenecks 2 weeks in advance[cite: 1].</li>
-                        <li>Optimized delivery costs by integrating Prompt-to-Code and AI web/app builders, accelerating development cycles for internal tool prototypes[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
+ <article class="job rv"><div class="yrs">2025 –<br>now</div><div>
+  <h3>IT Project Manager</h3><div class="where">Spotline Software Solution · Bhubaneswar</div>
+  <ul>
+   <li>Built an AI-driven governance framework that automates real-time reporting, cutting manual reporting effort by <b>30%</b>.</li>
+   <li>Designed technology roadmaps with agentic workflows to allocate resources better: utilisation up <b>15%</b>.</li>
+   <li>Deployed predictive analytics that flags project bottlenecks <b>two weeks ahead</b>.</li>
+   <li>Uses prompt-to-code and AI app builders to shorten internal tool prototyping.</li>
+  </ul></div></article>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Program Manager | Wipro Technologies Pvt. Ltd.</h3>
-                    <p class="company-duration">November 2015 – June 2025 | Indianapolis (USA), Mannheim (Germany), Bhubaneswar (India)</p>
-                    <ul class="bullets">
-                        <li>Spearheaded a $16 million USD portfolio, consistently exceeding revenue targets through strategic integration of automation into global service delivery[cite: 1].</li>
-                        <li>Pioneered delivery of complex IT solutions for Roche, Harman, and Bank of International Settlements, leveraging AI-powered business analysis to identify $500k+ in annual operational savings[cite: 1].</li>
-                        <li>Directed multiple strategic roadmaps and cultivated global cross-functional teams across USA, Germany, and India, reducing training lead times by 25% via AI-driven knowledge management systems[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
+ <article class="job rv"><div class="yrs">2011 –<br>2025</div><div>
+  <h3>Program Manager · Project Manager · Operations Manager</h3><div class="where">Wipro Technologies · US / Germany / India</div>
+  <ul>
+   <li>Led a <b>$16M</b> global portfolio and hit revenue targets without a major SLA breach.</li>
+   <li>Found <b>$500K+</b> a year in operational savings for Roche, Harman and the Bank for International Settlements.</li>
+   <li>Directed digital transformation roadmaps for Fortune 500 clients across multi-geography teams.</li>
+   <li>Ran infrastructure and change workflows for Honeywell on ITIL, improving service reliability and offshore SLA adherence.</li>
+   <li>Cut new-hire training lead time by <b>25%</b> with AI-driven knowledge management.</li>
+   <li>Led leads, SMEs and coaches on EMC data-storage delivery, with KPIs that lifted offshore quality.</li>
+  </ul></div></article>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Project Manager | Wipro Technologies Pvt. Ltd.</h3>
-                    <p class="company-duration">October 2014 – October 2015 | Bangalore / Bengaluru, India</p>
-                    <ul class="bullets">
-                        <li>Streamlined Infrastructure and Change Management for Honeywell International, utilizing ITIL best practices to enhance service reliability[cite: 1].</li>
-                        <li>Accelerated Root Cause Analysis (RCA) during major outages by implementing standardized incident tracking, improving resolution speed for critical offshore operations[cite: 1].</li>
-                        <li>Mentored a multidisciplinary team of 43 engineers, establishing KPIs that boosted overall delivery quality for EMC Data Storage solutions[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
+ <article class="job rv"><div class="yrs">2011</div><div>
+  <h3>Project Lead</h3><div class="where">Wipro Technologies · Bangalore</div>
+  <ul><li>Mentored a team of <b>43 engineers</b> on EMC storage solutions and set the KPIs that raised delivery quality.</li></ul></div></article>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Operations Manager | Wipro Technologies Pvt. Ltd.</h3>
-                    <p class="company-duration">December 2011 – October 2014 | Bangalore / Bengaluru, India</p>
-                    <ul class="bullets">
-                        <li>Led a multidisciplinary team of leads, SMEs, and coaches to deliver enterprise EMC Data Storage solutions[cite: 1].</li>
-                        <li>Orchestrated service improvement initiatives aligned with ITIL best practices and defined key performance indicators (KPIs)[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
+ <article class="job rv"><div class="yrs">2007 –<br>2010</div><div>
+  <h3>Lead Problem Resolution Officer</h3><div class="where">Convergys · Bangalore</div>
+  <ul><li>Technical lead and SME for high-complexity Microsoft Windows escalations, protecting client satisfaction and SLA performance.</li></ul></div></article>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Project Lead | Wipro Technologies Pvt. Ltd.</h3>
-                    <p class="company-duration">January 2011 – December 2011 | Bangalore / Bengaluru, India</p>
-                    <ul class="bullets">
-                        <li>Mentored a team of 43 engineers, providing technical guidance and conducting formal performance appraisals[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
+ <div class="clients rv"><small>Work delivered for</small><span>Roche</span><span>Honeywell</span><span>Harman</span><span>Bank for International Settlements</span><span>EMC</span><span>Microsoft</span></div>
+</section>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Lead Problem Resolution Officer (Technical Lead) | Convergys India Services Pvt. Ltd.</h3>
-                    <p class="company-duration">August 2007 – May 2010 | Bangalore / Bengaluru, India</p>
-                    <ul class="bullets">
-                        <li>Resolved high-level technical escalations for Microsoft Portables and Windows OS, serving as a Subject Matter Expert (SME) to maintain peak client satisfaction[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
+<section id="craft" class="craft">
+ <h2 class="rv">What's in<br>the toolkit</h2>
+ <div class="rv">
+  <dl>
+   <dt>Agentic AI &amp; automation</dt><dd>n8n, Make.com, multi-agent workflows, prompt engineering, prompt-to-code. Daily use of Claude, Copilot and Gemini.</dd>
+   <dt>Life-sciences platforms</dt><dd>Veeva Vault across GPS, BIOM, eTMF, Quality and RA.</dd>
+   <dt>Data &amp; analytics</dt><dd>Power BI, KPI architecture, predictive risk models, AI-assisted SQL.</dd>
+   <dt>Governance</dt><dd>SAFe, Scrum, Kanban, ITIL v3, Six Sigma White Belt, AI governance frameworks. Jira, JSM, ServiceNow, Smartsheet.</dd>
+   <dt>Credentials</dt><dd>PMP · SAFe Practitioner · ITIL v3 Foundation · AI Career Accelerator Inner Circle (Be10x, 2026) · B.Tech IT, Silicon Institute of Technology.</dd>
+  </dl>
+  <div class="note"><b>The through-line.</b> The goal isn't AI for its own sake. It's less manual reporting, earlier risk signals and teams that ramp faster. Each tool earns its place by moving a number.</div>
+ </div>
+</section>
 
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Technical & Delivery Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>AI & Agentic Automation</h3>
-                <p>Agentic AI, Make.com, n8n, Prompt Engineering, Generative AI, Prompt-to-Code, AI Web/App Builders[cite: 1].</p>
-            </div>
-            <div class="skill-card">
-                <h3>Project & Delivery Governance</h3>
-                <p>SAFe Agile Practitioner, PMP, Scrum, ITIL v3, Six Sigma, Lean, Traditional (Waterfall, Hybrid, V-model), AI-Powered Business & Data Analysis[cite: 1].</p>
-            </div>
-            <div class="skill-card">
-                <h3>Enterprise Tools & Technical Scope</h3>
-                <p>PowerBI, JIRA, Smartsheet, ServiceNow, Monday.com, Zendesk, HP ALM, Veeva Vault, AWS, Acquia Cloud, EMC Storage Products (SAN, NAS, Replication, DR), MS Excel with AI[cite: 1].</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications">
-        <h2>Certifications & Education</h2>
-        <div class="skill-card" style="max-width: 850px; margin: 0 auto;">
-            <ul class="bullets">
-                <li><strong>AI Career Accelerator Inner Circle Program:</strong> Completed with Be10x (2026)[cite: 1]</li>
-                <li><strong>Project Management:</strong> Certified PMP, SAFe Practitioner, Wipro Scrum Master (WSM)[cite: 1]</li>
-                <li><strong>Technical Certifications:</strong> ITIL v3 Foundation, Six Sigma White Belt, Lean, MS101, MS201, VelociQ[cite: 1]</li>
-                <li><strong>Education:</strong> Bachelor of Technology in Information Technology | Silicon Institute of Technology (BPUT)[cite: 1]</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact & Engagement</h2>
-        <p>Open to AI-led enterprise delivery and program transformation initiatives.</p>
-        <div class="contact-info">
-            <a href="mailto:avashmohanty@gmail.com"><i class="fas fa-envelope"></i> avashmohanty@gmail.com</a>
-            <a href="https://linkedin.com/in/avash-mohanty" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://avashmohanty.github.io/" target="_blank"><i class="fab fa-globe"></i> GitHub Page</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Avash Mohanty. All Rights Reserved.</p>
-    </footer>
-
+<section id="contact" class="contact">
+ <h2 class="rv">Let's talk<br><a href="mailto:avashmohanty@gmail.com">delivery.</a></h2>
+ <div class="cl"><a href="mailto:avashmohanty@gmail.com">avashmohanty@gmail.com</a><a href="https://linkedin.com/in/avash-mohanty" target="_blank" rel="noopener">linkedin.com/in/avash-mohanty</a><span>Bhubaneswar, India</span></div>
+ <footer><span>Created by Avash Mohanty, 2026</span><span>Set in Instrument Serif &amp; Schibsted Grotesk</span></footer>
+</section>
+</div>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
